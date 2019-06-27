@@ -83,7 +83,7 @@
 					<archive>
 						<manifest>
 							<mainClass>
-								net.theceres.App
+								com.dong.springboot.DongstorysApplication
 							</mainClass>
 						</manifest>
 					</archive>
