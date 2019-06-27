@@ -23,7 +23,7 @@ public class WebController {
 	}
 
 	@ResponseBody
-	@GetMapping("/test")
+	@GetMapping("/list")
 	public String test(Model model) {
 
 		String values;
