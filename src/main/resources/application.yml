@@ -1,19 +1,14 @@
 server:
   port: 8081
 
+# Test
 spring:
   profiles:
     active: local # 기본 환경 선택
-    
+
 # local 환경
-# Hibernate ddl auto (create, create-drop, validate, update)
 ---
 spring:
   profiles: local
   jpa:
     show-sql: true
-    hibernate:
-      ddl-auto: create-drop
-  h2:
-    console:
-      enabled: true
