@@ -1,7 +1,11 @@
 package com.dong.springboot.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.dong.springboot.service.PostsService;
 
 import lombok.AllArgsConstructor;
 
@@ -9,8 +13,24 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class WebController {
 
-    @GetMapping("/")
-    public String main() {
-        return "main";
-    }
+	private PostsService postsService;
+
+	@GetMapping("/")
+	public String main(Model model) {
+		model.addAttribute("posts", postsService.findAllDesc());
+		System.out.println("model: " + model + ", " + model.toString());
+		return "main";
+	}
+
+	@ResponseBody
+	@GetMapping("/test")
+	public String test(Model model) {
+
+		String values;
+
+		values = "{\"1\":\"saaaaa\", \"2\", \"bbbbb\"}";
+
+		return values;
+	}
+
 }
