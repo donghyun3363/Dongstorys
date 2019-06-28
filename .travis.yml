@@ -16,12 +16,6 @@ cache:
 
 script: ./mvnw clean install
 
-## CI 실행 완료시 메일로 알람
-notifications:
-  email:
-    recipients:
-      - donghyun3363@gmail.com
-
 before_deploy:
   - zip -r Dongstorys *
   - mkdir -p deploy
@@ -54,3 +48,10 @@ deploy:
     on:
       repo: donghyun3363/Dongstorys
       branch: master
+
+
+## CI 실행 완료시 메일로 알람
+notifications:
+  email:
+    recipients:
+      - donghyun3363@gmail.com
