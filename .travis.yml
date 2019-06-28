@@ -1,4 +1,7 @@
 language: java
+before_install:
+  - chmod +x mvnw
+
 jdk:
   - openjdk8
 
@@ -18,6 +21,3 @@ notifications:
   email:
     recipients:
       - donghyun3363@gmail.com
-
-before_install:
-  - chmod +x mvnw
