@@ -38,7 +38,7 @@ deploy:
     local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
     on:
-      repo: donghyun3363/Dongstroys
+      repo: donghyun3363/Dongstorys
       branch: master
 
   - provider: codedeploy
@@ -52,5 +52,5 @@ deploy:
     region: ap-northeast-2
     wait-until-deployed: true
     on:
-      repo: donghyun3363/Dongstroys
+      repo: donghyun3363/Dongstorys
       branch: master
