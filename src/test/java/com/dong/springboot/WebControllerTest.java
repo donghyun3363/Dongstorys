@@ -26,4 +26,14 @@ public class WebControllerTest {
 		//assertThat(body).contains("test");
 	}
 	
+    @Test
+    public void Profile확인 () {
+        //when
+        String profile = this.restTemplate.getForObject("/profile", String.class);
+
+        System.out.println("!! " + profile);
+        //then
+        assertThat(profile).isEqualTo("local");
+    }
+	
 }
